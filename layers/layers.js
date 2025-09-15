@@ -222,7 +222,7 @@ var lyr_Claims_3 = new ol.layer.Vector({
     <img src="styles/legend/Claims_3_2.png" /> Merged<br />\
     <img src="styles/legend/Claims_3_3.png" /> Reviewing<br />\
     <img src="styles/legend/Claims_3_4.png" /> Unclaimed<br />\
-    <img src="styles/legend/Claims_3_5.png" /> <br />' });
+    <img src="styles/legend/Claims_3_5.png" /> Waiting Review<br />' });
 var format_Grid_4 = new ol.format.GeoJSON();
 var features_Grid_4 = format_Grid_4.readFeatures(json_Grid_4, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
@@ -300,7 +300,7 @@ maxResolution:4050.4567668451764,
     <img src="styles/legend/Settlements_6_7.png" /> <br />' });
 var group_RasterMaps = new ol.layer.Group({
                                 layers: [],
-                                fold: 'close',
+                                fold: 'open',
                                 title: 'Raster Maps'});
 
 lyr_Landmass_0.setVisible(true);lyr_Regions_1.setVisible(false);lyr_Roadmaps_2.setVisible(false);lyr_Claims_3.setVisible(false);lyr_Grid_4.setVisible(true);lyr_Dungeons_5.setVisible(true);lyr_Settlements_6.setVisible(true);

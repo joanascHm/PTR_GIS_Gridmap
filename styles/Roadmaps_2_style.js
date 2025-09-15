@@ -29,7 +29,7 @@ var style_Roadmaps_2 = function(feature, resolution){
             // Start of if blocks and style check logic
             if (exp_Roadmaps_2rule0_eval_expression(context)) {
                       return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(247,173,8,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 4.028}),fill: new ol.style.Fill({color: 'rgba(145,82,45,0.0)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(79,55,3,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 4.028}),fill: new ol.style.Fill({color: 'rgba(247,173,8,0.34901960784313724)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
@@ -37,7 +37,7 @@ var style_Roadmaps_2 = function(feature, resolution){
                     }
                     else if (exp_Roadmaps_2rule1_eval_expression(context)) {
                       return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(8,247,23,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 4.028}),fill: new ol.style.Fill({color: 'rgba(145,82,45,0.0)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(79,55,3,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 4.028}),fill: new ol.style.Fill({color: 'rgba(145,239,45,0.403921568627451)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
@@ -45,7 +45,7 @@ var style_Roadmaps_2 = function(feature, resolution){
                     }
                     else if (exp_Roadmaps_2rule2_eval_expression(context)) {
                       return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(255,27,0,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 3.8}),fill: new ol.style.Fill({color: 'rgba(233,41,22,0.0)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(79,55,3,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 3.8}),fill: new ol.style.Fill({color: 'rgba(255,27,0,0.26666666666666666)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
