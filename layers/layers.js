@@ -1,8 +1,10 @@
+ol.proj.proj4.register(proj4);
+//ol.proj.get("EPSG:4326").setExtent([0.002485, -37.002022, 60.002491, -0.002016]);
 var wms_layers = [];
 
 var format_Landmass_0 = new ol.format.GeoJSON();
 var features_Landmass_0 = format_Landmass_0.readFeatures(json_Landmass_0, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_Landmass_0 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -17,7 +19,7 @@ var lyr_Landmass_0 = new ol.layer.Vector({
             });
 var format_Grid_1 = new ol.format.GeoJSON();
 var features_Grid_1 = format_Grid_1.readFeatures(json_Grid_1, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_Grid_1 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -32,7 +34,7 @@ var lyr_Grid_1 = new ol.layer.Vector({
             });
 var format_Roadmaps_2 = new ol.format.GeoJSON();
 var features_Roadmaps_2 = format_Roadmaps_2.readFeatures(json_Roadmaps_2, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_Roadmaps_2 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -50,7 +52,7 @@ var lyr_Roadmaps_2 = new ol.layer.Vector({
     <img src="styles/legend/Roadmaps_2_3.png" /> <br />' });
 var format_Claims_3 = new ol.format.GeoJSON();
 var features_Claims_3 = format_Claims_3.readFeatures(json_Claims_3, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_Claims_3 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -68,39 +70,69 @@ var lyr_Claims_3 = new ol.layer.Vector({
     <img src="styles/legend/Claims_3_3.png" /> Reviewing<br />\
     <img src="styles/legend/Claims_3_4.png" /> Unclaimed<br />\
     <img src="styles/legend/Claims_3_5.png" /> <br />' });
-var format_Dungeons2dungeons_4 = new ol.format.GeoJSON();
-var features_Dungeons2dungeons_4 = format_Dungeons2dungeons_4.readFeatures(json_Dungeons2dungeons_4, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Dungeons2dungeons_4 = new ol.source.Vector({
+var format_Dungeons_4 = new ol.format.GeoJSON();
+var features_Dungeons_4 = format_Dungeons_4.readFeatures(json_Dungeons_4, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_Dungeons_4 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Dungeons2dungeons_4.addFeatures(features_Dungeons2dungeons_4);
-var lyr_Dungeons2dungeons_4 = new ol.layer.Vector({
+jsonSource_Dungeons_4.addFeatures(features_Dungeons_4);
+var lyr_Dungeons_4 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_Dungeons2dungeons_4, 
-                style: style_Dungeons2dungeons_4,
-                popuplayertitle: 'Dungeons2 — dungeons',
+                source:jsonSource_Dungeons_4,
+maxResolution:1431.4550084447467,
+ 
+                style: style_Dungeons_4,
+                popuplayertitle: 'Dungeons',
                 interactive: true,
-                title: '<img src="styles/legend/Dungeons2dungeons_4.png" /> Dungeons2 — dungeons'
-            });
-var format_Settlements2settlements_5 = new ol.format.GeoJSON();
-var features_Settlements2settlements_5 = format_Settlements2settlements_5.readFeatures(json_Settlements2settlements_5, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Settlements2settlements_5 = new ol.source.Vector({
+    title: 'Dungeons<br />\
+    <img src="styles/legend/Dungeons_4_0.png" /> Breton Castle Ruin<br />\
+    <img src="styles/legend/Dungeons_4_1.png" /> Breton Crypt<br />\
+    <img src="styles/legend/Dungeons_4_2.png" /> Camp<br />\
+    <img src="styles/legend/Dungeons_4_3.png" /> Cave<br />\
+    <img src="styles/legend/Dungeons_4_4.png" /> Direnni Ruin<br />\
+    <img src="styles/legend/Dungeons_4_5.png" /> Dreugh Hive<br />\
+    <img src="styles/legend/Dungeons_4_6.png" /> Grotto<br />\
+    <img src="styles/legend/Dungeons_4_7.png" /> Landmark<br />\
+    <img src="styles/legend/Dungeons_4_8.png" /> Mines<br />\
+    <img src="styles/legend/Dungeons_4_9.png" /> Nedic Ruin<br />\
+    <img src="styles/legend/Dungeons_4_10.png" /> Nord Barrow<br />\
+    <img src="styles/legend/Dungeons_4_11.png" /> Nord Fortress Ruin<br />\
+    <img src="styles/legend/Dungeons_4_12.png" /> Other Ruin<br />\
+    <img src="styles/legend/Dungeons_4_13.png" /> Ra Gada Ruin<br />\
+    <img src="styles/legend/Dungeons_4_14.png" /> Reachfolk Ruin<br />\
+    <img src="styles/legend/Dungeons_4_15.png" /> Redguard Crypt<br />\
+    <img src="styles/legend/Dungeons_4_16.png" /> Rourken Dwemer Ruin<br />\
+    <img src="styles/legend/Dungeons_4_17.png" /> Shipwreck<br />\
+    <img src="styles/legend/Dungeons_4_18.png" /> Thrid Empire Ruin<br />\
+    <img src="styles/legend/Dungeons_4_19.png" /> Warp Ruin<br />' });
+var format_Settlements_5 = new ol.format.GeoJSON();
+var features_Settlements_5 = format_Settlements_5.readFeatures(json_Settlements_5, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_Settlements_5 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Settlements2settlements_5.addFeatures(features_Settlements2settlements_5);
-var lyr_Settlements2settlements_5 = new ol.layer.Vector({
+jsonSource_Settlements_5.addFeatures(features_Settlements_5);
+var lyr_Settlements_5 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_Settlements2settlements_5, 
-                style: style_Settlements2settlements_5,
-                popuplayertitle: 'Settlements2 — settlements',
+                source:jsonSource_Settlements_5,
+maxResolution:4050.4567668451764,
+ 
+                style: style_Settlements_5,
+                popuplayertitle: 'Settlements',
                 interactive: true,
-                title: '<img src="styles/legend/Settlements2settlements_5.png" /> Settlements2 — settlements'
-            });
+    title: 'Settlements<br />\
+    <img src="styles/legend/Settlements_5_0.png" /> 0<br />\
+    <img src="styles/legend/Settlements_5_1.png" /> 1<br />\
+    <img src="styles/legend/Settlements_5_2.png" /> 2<br />\
+    <img src="styles/legend/Settlements_5_3.png" /> 3<br />\
+    <img src="styles/legend/Settlements_5_4.png" /> 4<br />\
+    <img src="styles/legend/Settlements_5_5.png" /> 5<br />\
+    <img src="styles/legend/Settlements_5_6.png" /> 6<br />\
+    <img src="styles/legend/Settlements_5_7.png" /> <br />' });
 var format_Regions_6 = new ol.format.GeoJSON();
 var features_Regions_6 = format_Regions_6.readFeatures(json_Regions_6, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_Regions_6 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -267,29 +299,29 @@ var lyr_Regions_6 = new ol.layer.Vector({
     <img src="styles/legend/Regions_6_152.png" /> Urush-Nal<br />\
     <img src="styles/legend/Regions_6_153.png" /> Valus Mountains<br />' });
 
-lyr_Landmass_0.setVisible(true);lyr_Grid_1.setVisible(true);lyr_Roadmaps_2.setVisible(false);lyr_Claims_3.setVisible(false);lyr_Dungeons2dungeons_4.setVisible(true);lyr_Settlements2settlements_5.setVisible(true);lyr_Regions_6.setVisible(false);
-var layersList = [lyr_Landmass_0,lyr_Grid_1,lyr_Roadmaps_2,lyr_Claims_3,lyr_Dungeons2dungeons_4,lyr_Settlements2settlements_5,lyr_Regions_6];
+lyr_Landmass_0.setVisible(true);lyr_Grid_1.setVisible(true);lyr_Roadmaps_2.setVisible(false);lyr_Claims_3.setVisible(false);lyr_Dungeons_4.setVisible(true);lyr_Settlements_5.setVisible(true);lyr_Regions_6.setVisible(false);
+var layersList = [lyr_Landmass_0,lyr_Grid_1,lyr_Roadmaps_2,lyr_Claims_3,lyr_Dungeons_4,lyr_Settlements_5,lyr_Regions_6];
 lyr_Landmass_0.set('fieldAliases', {'fid': 'fid', 'Continent': 'Continent', });
 lyr_Grid_1.set('fieldAliases', {'fid': 'fid', 'id': 'id', 'left': 'left', 'top': 'top', 'right': 'right', 'bottom': 'bottom', });
 lyr_Roadmaps_2.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'Release Date': 'Release Date', 'Project': 'Project', 'Status': 'Status', });
 lyr_Claims_3.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'Status': 'Status', 'Claimant': 'Claimant', 'Reviewer': 'Reviewer', });
-lyr_Dungeons2dungeons_4.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'Type': 'Type', 'Status': 'Status', 'Claimant': 'Claimant', });
-lyr_Settlements2settlements_5.set('fieldAliases', {'fid': 'fid', 'Nome': 'Nome', 'Alignment': 'Alignment', 'Tier': 'Tier', 'Race': 'Race', 'Capital': 'Capital', });
+lyr_Dungeons_4.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'Type': 'Type', 'Status': 'Status', 'Claimant': 'Claimant', });
+lyr_Settlements_5.set('fieldAliases', {'fid': 'fid', 'Nome': 'Nome', 'Alignment': 'Alignment', 'Tier': 'Tier', 'Race': 'Race', 'Capital': 'Capital', });
 lyr_Regions_6.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'Province': 'Province', });
 lyr_Landmass_0.set('fieldImages', {'fid': 'Hidden', 'Continent': 'TextEdit', });
 lyr_Grid_1.set('fieldImages', {'fid': 'Hidden', 'id': 'TextEdit', 'left': 'TextEdit', 'top': 'TextEdit', 'right': 'TextEdit', 'bottom': 'TextEdit', });
 lyr_Roadmaps_2.set('fieldImages', {'fid': 'Hidden', 'Name': 'TextEdit', 'Release Date': 'DateTime', 'Project': 'TextEdit', 'Status': 'TextEdit', });
 lyr_Claims_3.set('fieldImages', {'fid': 'Hidden', 'Name': 'TextEdit', 'Status': 'TextEdit', 'Claimant': 'TextEdit', 'Reviewer': 'TextEdit', });
-lyr_Dungeons2dungeons_4.set('fieldImages', {'fid': 'TextEdit', 'Name': 'TextEdit', 'Type': 'TextEdit', 'Status': 'TextEdit', 'Claimant': 'TextEdit', });
-lyr_Settlements2settlements_5.set('fieldImages', {'fid': 'TextEdit', 'Nome': 'TextEdit', 'Alignment': 'TextEdit', 'Tier': 'TextEdit', 'Race': 'TextEdit', 'Capital': 'CheckBox', });
+lyr_Dungeons_4.set('fieldImages', {'fid': 'Hidden', 'Name': 'TextEdit', 'Type': 'TextEdit', 'Status': 'TextEdit', 'Claimant': 'TextEdit', });
+lyr_Settlements_5.set('fieldImages', {'fid': 'Hidden', 'Nome': 'TextEdit', 'Alignment': 'TextEdit', 'Tier': 'TextEdit', 'Race': 'TextEdit', 'Capital': 'CheckBox', });
 lyr_Regions_6.set('fieldImages', {'fid': 'Hidden', 'Name': 'TextEdit', 'Province': 'TextEdit', });
 lyr_Landmass_0.set('fieldLabels', {'Continent': 'no label', });
-lyr_Grid_1.set('fieldLabels', {'id': 'no label', 'left': 'no label', 'top': 'no label', 'right': 'no label', 'bottom': 'no label', });
-lyr_Roadmaps_2.set('fieldLabels', {'Name': 'inline label - visible with data', 'Release Date': 'inline label - visible with data', 'Project': 'inline label - visible with data', 'Status': 'inline label - visible with data', });
+lyr_Grid_1.set('fieldLabels', {'id': 'inline label - always visible', 'left': 'inline label - always visible', 'top': 'inline label - always visible', 'right': 'inline label - always visible', 'bottom': 'inline label - always visible', });
+lyr_Roadmaps_2.set('fieldLabels', {'Name': 'inline label - always visible', 'Release Date': 'inline label - always visible', 'Project': 'inline label - always visible', 'Status': 'inline label - always visible', });
 lyr_Claims_3.set('fieldLabels', {'Name': 'inline label - always visible', 'Status': 'inline label - always visible', 'Claimant': 'inline label - always visible', 'Reviewer': 'inline label - always visible', });
-lyr_Dungeons2dungeons_4.set('fieldLabels', {'fid': 'hidden field', 'Name': 'inline label - always visible', 'Type': 'inline label - always visible', 'Status': 'inline label - always visible', 'Claimant': 'inline label - always visible', });
-lyr_Settlements2settlements_5.set('fieldLabels', {'fid': 'hidden field', 'Nome': 'inline label - always visible', 'Alignment': 'inline label - always visible', 'Tier': 'inline label - always visible', 'Race': 'inline label - always visible', 'Capital': 'hidden field', });
-lyr_Regions_6.set('fieldLabels', {'Name': 'inline label - visible with data', 'Province': 'inline label - visible with data', });
+lyr_Dungeons_4.set('fieldLabels', {'Name': 'inline label - always visible', 'Type': 'inline label - always visible', 'Status': 'inline label - always visible', 'Claimant': 'inline label - always visible', });
+lyr_Settlements_5.set('fieldLabels', {'Nome': 'inline label - always visible', 'Alignment': 'inline label - always visible', 'Tier': 'inline label - always visible', 'Race': 'inline label - always visible', 'Capital': 'inline label - always visible', });
+lyr_Regions_6.set('fieldLabels', {'Name': 'inline label - always visible', 'Province': 'no label', });
 lyr_Regions_6.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
