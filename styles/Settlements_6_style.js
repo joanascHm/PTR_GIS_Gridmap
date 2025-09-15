@@ -1,6 +1,6 @@
 var size = 0;
 var placement = 'point';
-function categories_Settlements_5(feature, value, size, resolution, labelText,
+function categories_Settlements_6(feature, value, size, resolution, labelText,
                        labelFont, labelFill, bufferColor, bufferWidth,
                        placement) {
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
@@ -77,7 +77,7 @@ default:
     })];
                     break;}};
 
-var style_Settlements_5 = function(feature, resolution){
+var style_Settlements_6 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -97,7 +97,7 @@ var style_Settlements_5 = function(feature, resolution){
         labelText = String("");
     }
     
-    var style = categories_Settlements_5(feature, value, size, resolution, labelText,
+    var style = categories_Settlements_6(feature, value, size, resolution, labelText,
                             labelFont, labelFill, bufferColor,
                             bufferWidth, placement);
 

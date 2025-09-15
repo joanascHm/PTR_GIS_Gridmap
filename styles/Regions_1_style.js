@@ -1,6 +1,6 @@
 var size = 0;
 var placement = 'point';
-function categories_Regions_6(feature, value, size, resolution, labelText,
+function categories_Regions_1(feature, value, size, resolution, labelText,
                        labelFont, labelFill, bufferColor, bufferWidth,
                        placement) {
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
@@ -1237,7 +1237,7 @@ case 'Valus Mountains':
     })];
                     break;}};
 
-var style_Regions_6 = function(feature, resolution){
+var style_Regions_1 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -1253,11 +1253,11 @@ var style_Regions_6 = function(feature, resolution){
     var offsetX = 0;
     var offsetY = 0;
     var placement = 'point';
-    if (feature.get("Name") !== null) {
-        labelText = String(feature.get("Name"));
+    if ("" !== null) {
+        labelText = String("");
     }
     
-    var style = categories_Regions_6(feature, value, size, resolution, labelText,
+    var style = categories_Regions_1(feature, value, size, resolution, labelText,
                             labelFont, labelFill, bufferColor,
                             bufferWidth, placement);
 

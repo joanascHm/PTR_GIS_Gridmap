@@ -1,6 +1,6 @@
 var size = 0;
 var placement = 'point';
-function categories_Dungeons_4(feature, value, size, resolution, labelText,
+function categories_Dungeons_5(feature, value, size, resolution, labelText,
                        labelFont, labelFill, bufferColor, bufferWidth,
                        placement) {
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
@@ -325,7 +325,7 @@ case 'Warp Ruin':
     })];
                     break;}};
 
-var style_Dungeons_4 = function(feature, resolution){
+var style_Dungeons_5 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -345,7 +345,7 @@ var style_Dungeons_4 = function(feature, resolution){
         labelText = String("");
     }
     
-    var style = categories_Dungeons_4(feature, value, size, resolution, labelText,
+    var style = categories_Dungeons_5(feature, value, size, resolution, labelText,
                             labelFont, labelFill, bufferColor,
                             bufferWidth, placement);
 
